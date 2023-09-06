@@ -9,20 +9,27 @@ var UnAnsweredQs = []
 var MarkedQs = []
 var NotVisitQs = []
 
+// window.onload = function() {
+//   sessionStorage.setItem("AnsweredQs", JSON.stringify(AnsweredQs))
+//   sessionStorage.setItem("UnAnsweredQs", JSON.stringify(UnAnsweredQs))
+//   sessionStorage.setItem("MarkedQs", JSON.stringify(MarkedQs))
+//   sessionStorage.setItem("NotVisitQs", JSON.stringify(NotVisitQs))
+// }
+
 const RightPanel = () => {
   const { currentExam } = useSelector((state) => state.exam);
   const { setCount, count, answer } = ExamContextConsumer();
   const { questions } = currentExam;
 
+  // var AnsweredCount = JSON.parse(sessionStorage.getItem("AnsweredQs")).length
+  // var UnAnsweredCount = JSON.parse(sessionStorage.getItem("UnAnsweredCount")).length
+  // var MarkedForReviewCount = JSON.parse(sessionStorage.getItem("MarkedForReviewCount")).length
+  // var NotVisitedCount = JSON.parse(sessionStorage.getItem("NotVisitedCount")).length
 
-  // for(let i = 1; i < questions.length; i++) {
-  //   NotVisitQs.push(i)
-  // }
-
-  var AnsweredCount = AnsweredQs.length
-  var UnAnsweredCount = UnAnsweredQs.length
-  var MarkedForReviewCount = MarkedQs.length
-  var NotVisitedCount = NotVisitQs.length
+  var AnsweredCount = 0
+  var UnAnsweredCount = 0
+  var MarkedForReviewCount = 0
+  var NotVisitedCount = 0
 
   const getTextColor = (idx) => {
     if (idx === count) return "white";
@@ -48,7 +55,7 @@ const RightPanel = () => {
         // const found = AnsweredQs.find((e) => e == idx)
         // if(!found)
         // {
-        //   AnsweredQs.push(found)
+        //   AnsweredQs.push(idx)
         //   console.log(AnsweredQs)
         // }
         return "#a5d63d";

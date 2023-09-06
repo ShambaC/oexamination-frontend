@@ -135,19 +135,35 @@ const QuestionModelForm = ({ question, setQuestion }) => {
             </label>
           </Container>
 
-          <Container width="30%" margin="0px 20px">
-            <label>
-              <Text lineHeight="0px" size="18px">
-                Mark:
-              </Text>
-              <Input
-                type="number"
-                name="mark"
-                placeholder="Mark"
-                value={question["mark"]}
-                onChange={onchange}
-              />
-            </label>
+          <Container direction="column" width="30%" margin="0px 20px">
+            <Container>
+              <label>
+                <Text lineHeight="0px" size="18px">
+                  Mark:
+                </Text>
+                <Input
+                  type="number"
+                  name="mark"
+                  placeholder="Mark"
+                  value={question["mark"]}
+                  onChange={onchange}
+                />
+              </label>
+            </Container>
+            <Container>
+              <label>
+                <Text lineHeight="0px" size="18px">
+                  Negative Mark:
+                </Text>
+                <Input
+                  type="number"
+                  name="negmark"
+                  placeholder="Negative Mark"
+                  value={question["negmark"]}
+                  onChange={onchange}
+                />
+              </label>
+            </Container>
           </Container>
         </Container>
       </form>

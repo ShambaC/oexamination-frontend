@@ -31,6 +31,7 @@ const Question = ({ details, setDetails }) => {
       },
     ],
     mark: 0,
+    negmark: 0,
   });
 
   const onAdds = async () => {
@@ -40,7 +41,8 @@ const Question = ({ details, setDetails }) => {
       question.options[1].option &&
       question.options[2].option &&
       question.options[3].option &&
-      question.mark
+      question.mark &&
+      question.negmark
     ) {
       let ques = details.questions;
       ques.push(question);
@@ -70,6 +72,7 @@ const Question = ({ details, setDetails }) => {
             },
           ],
           mark: 0,
+          negmark: 0,
         });
       }
     } else {
