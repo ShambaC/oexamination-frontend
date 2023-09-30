@@ -62,10 +62,10 @@ const Question = ({ question, examid }) => {
         </Text>
       </Container>
       <Container direction="row" width="850px" justify="space-between">
-        <Text width="10%" size="15px">
-          <b>Question {count + 1} </b>
+        <Text width="11%" size="18px">
+          <b>Question {count + 1}: </b>
         </Text>
-        <Text width="90%" size="17px">
+        <Text width="89%" size="20px">
           <MathComponent tex={question.title} display={false} />
         </Text>
       </Container>
@@ -75,8 +75,8 @@ const Question = ({ question, examid }) => {
             <li
               style={{
                 display: "flex",
-                height: "25px",
-                fontSize: "17px",
+                height: "50px",
+                fontSize: "24px",
               }}
             >
               <input
@@ -90,7 +90,7 @@ const Question = ({ question, examid }) => {
                 <MathComponent tex={question.options[0].option} display={false}/>
               </label>
             </li>
-            <li style={{ display: "flex", height: "25px", fontSize: "17px" }}>
+            <li style={{ display: "flex", height: "50px", fontSize: "24px" }}>
               <input
                 type="radio"
                 id="answer"
@@ -102,7 +102,7 @@ const Question = ({ question, examid }) => {
                 <MathComponent tex={question.options[1].option} display={false}/>
               </label>
             </li>
-            <li style={{ display: "flex", height: "25px", fontSize: "17px" }}>
+            <li style={{ display: "flex", height: "50px", fontSize: "24px" }}>
               <input
                 type="radio"
                 id="answer"
@@ -114,7 +114,7 @@ const Question = ({ question, examid }) => {
                 <MathComponent tex={question.options[2].option} display={false}/>
               </label>
             </li>
-            <li style={{ display: "flex", height: "25px", fontSize: "17px" }}>
+            <li style={{ display: "flex", height: "50px", fontSize: "24px" }}>
               <input
                 type="radio"
                 id="answer"
