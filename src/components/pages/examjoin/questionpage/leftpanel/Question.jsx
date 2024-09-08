@@ -67,6 +67,8 @@ const Question = ({ question, examid }) => {
         </Text>
         <Text width="89%" size="20px">
           <MathComponent tex={question.title} display={false} />
+          <br></br>
+          <img src={question.imgLink} alt="image cannot load"></img>
         </Text>
       </Container>
       <Container direction="row" align="flex-end" justify="space-between">

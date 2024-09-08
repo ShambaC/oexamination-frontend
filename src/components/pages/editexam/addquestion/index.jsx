@@ -12,6 +12,7 @@ const Question = ({ details, setDetails }) => {
 
   const [question, setQuestion] = useState({
     title: "",
+    imgLink: "",
     options: [
       {
         option: "",
@@ -37,6 +38,7 @@ const Question = ({ details, setDetails }) => {
   const onAdds = async () => {
     if (
       question.title &&
+      question.imgLink &&
       question.options[0].option &&
       question.options[1].option &&
       question.options[2].option &&
@@ -53,6 +55,7 @@ const Question = ({ details, setDetails }) => {
         if (exam) setDetails(exam);
         setQuestion({
           title: "",
+          imgLink: "",
           options: [
             {
               option: "",

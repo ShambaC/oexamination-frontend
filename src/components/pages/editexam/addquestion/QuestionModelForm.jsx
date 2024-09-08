@@ -61,6 +61,18 @@ const QuestionModelForm = ({ question, setQuestion }) => {
               ></textarea>
             </div>
           </label>
+          <label>
+            <Text lineHeight="0px" size="18px">
+              Image Link:
+            </Text>
+            <Input
+                  type="text"
+                  name="imgLink"
+                  placeholder="image link"
+                  value={question["imgLink"]}
+                  onChange={onchange}
+                />
+          </label>
         </Container>
         <Container direction="row">
           <Container direction="column" width="60%">

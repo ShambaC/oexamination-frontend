@@ -19,6 +19,7 @@ const Question = ({ question, idx, onRemove }) => {
           </Text>
           <Text width="80%" size="15px">
             <MathComponent tex={question.title} display={false} />
+            <img src={question.imgLink} alt="image cannot load"></img>
           </Text>
         </Container>
         <Text width="10%" size="15px">
